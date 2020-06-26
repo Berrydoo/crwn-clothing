@@ -31,8 +31,6 @@ class App extends React.Component {
                 this.setState({ currentUser: null });
             }
         });
-
-        console.log(this.state);
     }
 
     componentWillUnmount() {

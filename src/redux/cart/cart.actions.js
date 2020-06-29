@@ -1,7 +1,10 @@
 import CartTypes from "./cart.types";
 
-const toggleDropdown = () => ({
+export const toggleDropdown = () => ({
     type: CartTypes.toggleHidden,
 });
 
-export default toggleDropdown;
+export const addItem = (item) => ({
+    type: CartTypes.addItem,
+    payload: item,
+});

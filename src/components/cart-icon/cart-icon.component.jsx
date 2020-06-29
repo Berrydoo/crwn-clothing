@@ -13,7 +13,9 @@ const CartIcon = ({ toggleDropdown, cartItemsCount }) => (
 
 const mapStateToProps = (state) => ({
     isHidden: state.cart.isHidden,
-    cartItemsCount: state.cart.cartItems.length,
+    cartItemsCount: state.cart.cartItems
+        .map((item) => item.qty)
+        .reduce((prev, current) => prev + current, 0),
 });
 
 const mapDispatchToProps = (dispatch) => ({

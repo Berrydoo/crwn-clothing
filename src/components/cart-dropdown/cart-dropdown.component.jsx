@@ -8,8 +8,10 @@ const CartDropdown = ({ isHidden, cartItems }) =>
     !isHidden && (
         <div className="cart-dropdown">
             {cartItems.map((item) => (
-                <div className="cart-items">
-                    <div>{item.name}</div>
+                <div className="cart-items" key={item.id}>
+                    <div>
+                        {item.name} ({item.qty})
+                    </div>
                     <div>{item.price}</div>
                 </div>
             ))}
